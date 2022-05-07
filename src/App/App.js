@@ -1,24 +1,34 @@
-import logo from '../logo.svg';
-import './App.css';
+import React from 'react';
+
+import { Map } from './Components/Map_components/Map';
+import { CarData } from './Components/Other_components/CarData';
+import { DonutChart } from './Components/Other_components/DonutChart';
+import { NbLaunches } from './Components/Other_components/NbLaunches';
+import { Title } from './Components/Other_components/Title';
+import { Upcoming } from './Components/Other_components/Upcoming';
+import { RocketsCarousel } from './Components/Rockets_components/RocketsCarousel';
+import { Timeline } from './Components/Timeline_components/Timeline';
+
+import './normalize.css';
+import './Styles/CSS/styles.css';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Title />
+      <Map />
+      <Timeline />
+      <RocketsCarousel />
+      <Upcoming />
+      <NbLaunches />
+      <CarData />
+      <DonutChart />
+      <DonutChart />
+      <DonutChart />
+      
+    </main>
   );
 }
 
