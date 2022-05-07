@@ -1,0 +1,13 @@
+.timeline {
+    overflow: scroll;
+}
+
+.event {
+    border: 1px solid orangered;
+    padding: 10px;
+    margin-bottom: 1rem;
+
+    h3, p {
+        margin: 0;
+    }
+}
