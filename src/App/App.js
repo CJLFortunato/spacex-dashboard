@@ -33,7 +33,9 @@ function App() {
     const getRoadsterData = async() => {
 
       const data = await callRoadsterAPI();
+      setRoadsterData(data);
     }
+    getRoadsterData();
     
   }, [])
 
@@ -48,7 +50,7 @@ function App() {
       <RocketsCarousel />
       <Upcoming />
       <NbLaunches />
-      <CarData />
+      <CarData data={roadsterData}/>
       <DonutChart />
       <DonutChart />
       <DonutChart />

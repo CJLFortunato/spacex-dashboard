@@ -1,10 +1,14 @@
 import React from "react";
 
-export function CarData () {
+export function CarData (props) {
+
+    const distance = props.data.earth_distance_km.toFixed();
+    console.log(distance);
 
     return ( 
         <div className="car-data">
-            <h2>Elon Musk's stupid car is somewhere in the solar system</h2>
+            <h2>Elon Musk's Tesla Roadster is {distance} km away from Earth</h2>
+            <p>It was launched onto an heliocentric orbit in 2018.</p>
         </div> 
     );
 }
