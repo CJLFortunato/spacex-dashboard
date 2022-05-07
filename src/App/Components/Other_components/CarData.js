@@ -2,8 +2,7 @@ import React from "react";
 
 export function CarData (props) {
 
-    const distance = props.data.earth_distance_km.toFixed();
-    console.log(distance);
+    const distance = props.data.earth_distance_km? props.data.earth_distance_km.toFixed(): "unknown";
 
     return ( 
         <div className="car-data">

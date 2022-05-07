@@ -1,0 +1,16 @@
+.nb-launches {
+
+    ul {
+
+        // border: 1px solid teal;
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 60%;
+        padding-left: 10px;
+
+      li {
+        list-style-type: none;
+        }  
+    }
+    
+}

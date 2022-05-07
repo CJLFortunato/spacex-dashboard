@@ -16,6 +16,16 @@ h1 {
   margin: 0;
 }
 
+.nb-launches ul {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 60%;
+  padding-left: 10px;
+}
+.nb-launches ul li {
+  list-style-type: none;
+}
+
 body {
   background-color: gray;
   height: 100vh;
