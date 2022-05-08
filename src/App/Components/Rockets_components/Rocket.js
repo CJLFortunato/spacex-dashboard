@@ -3,10 +3,10 @@ import React from "react";
 export function Rocket(props) {
 
     const data = props.data;
-    console.log(data);
+    // console.log(data);
     return ( 
         <div className="rocket">
-            <img src={data.flickr_images[0]} width="200" ></img>
+            <img src={data.flickr_images[0]} width="200" alt={data.name}></img>
             <div className="text">
                 <h3>{data.name}</h3>
                 <ul>

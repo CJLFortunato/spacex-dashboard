@@ -14,7 +14,9 @@ import {
   callRoadsterAPI, 
   callLaunchesAPI, 
   callLaunchesAPIUpcoming,
-  callRocketsAPI
+  callRocketsAPI,
+  callLaunchPadsAPI,
+  callLandPadsAPI
 } from './Utils/apiCalls';
 
 import './normalize.css';
@@ -29,6 +31,7 @@ function App() {
   const [ launchData, setLaunchData ] = useState([]);
   const [ upcoming, setUpcoming ] = useState([]);
   const [ rocketData, setRocketData ] =useState([]);
+  const [ padsData, setPadsData ] =useState([]);
 
 
   useEffect(() => {
@@ -37,34 +40,47 @@ function App() {
 
       const data = await callRoadsterAPI();
       setRoadsterData(data);
-    }
+    };
     getRoadsterData();
   
     const getLaunchData = async() => {
   
       const data = await callLaunchesAPI();
       setLaunchData(data);
-    }
+    };
     getLaunchData();
 
     const getHistoryData = async () => {
 
       const data = await callHistoryAPI();
       setHistoryData(data.docs);
-    }
+    };
     getHistoryData();
 
     const getUpcoming = async () => {
       const data = await callLaunchesAPIUpcoming();
       setUpcoming(data);
-    }
+    };
     getUpcoming();
 
     const getRocketData = async () => {
       const data = await callRocketsAPI();
       setRocketData(data.docs);
-    }
+    };
     getRocketData();
+
+    const getPadsData = async () => {
+
+      const landpads = await callLandPadsAPI();
+      const launchpads = await callLaunchPadsAPI();
+
+      setPadsData({
+        landpads,
+        launchpads
+      });
+    };
+    getPadsData();
+
   }, []);
 
   
@@ -76,7 +92,7 @@ function App() {
   return (
     <main className="App">
       <Title />
-      <Map />
+      <Map data={padsData}/>
       <Timeline data={historyData}/>
       <RocketsCarousel data={rocketData}/>
       <Upcoming data={upcoming}/>

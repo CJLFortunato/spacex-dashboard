@@ -177,3 +177,78 @@ export const callRocketsAPI = async () => {
     // console.log(data);
     return data;
 };
+
+export const callLandPadsAPI = async () => {
+
+    const body = {
+        "query": {},
+        "options": {
+            "select": {
+                "full_name": 1,
+                "status": 1,
+                "locality": 1,
+                "region": 1,
+                "landing_attempts": 1,
+                "landing_successes": 1,
+                "latitude": 1,
+                "longitude": 1
+            },
+            "pagination": false,
+        }
+    };
+
+    const response = await fetch('https://api.spacexdata.com/v4/landpads/query', {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify(body)
+    });
+
+    let data;
+
+    if(response.ok) {
+        data = await response.json();
+    } else {
+        data = {};
+    }
+    // console.log(data);
+    return data;
+};
+export const callLaunchPadsAPI = async () => {
+
+    const body = {
+        "query": {},
+        "options": {
+            "select": {
+                "full_name": 1,
+                "status": 1,
+                "locality": 1,
+                "region": 1,
+                "landing_attempts": 1,
+                "landing_successes": 1,
+                "latitude": 1,
+                "longitude": 1
+            },
+            "pagination": false,
+        }
+    };
+
+    const response = await fetch('https://api.spacexdata.com/v4/launchpads/query', {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify(body)
+    });
+
+    let data;
+
+    if(response.ok) {
+        data = await response.json();
+    } else {
+        data = {};
+    }
+    // console.log(data);
+    return data;
+};
