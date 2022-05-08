@@ -26,6 +26,50 @@ h1 {
   list-style-type: none;
 }
 
+.rockets-carousel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.rockets-carousel button {
+  width: 1.5rem;
+}
+.rockets-carousel .carousel {
+  border: 1px solid blueviolet;
+  overflow: hidden;
+  width: 85%;
+}
+.rockets-carousel .carousel .inner {
+  border: 1px solid blue;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.rocket {
+  height: 280px;
+  margin: 0 10px;
+  border: 1px solid green;
+  width: 300px;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+}
+.rocket img {
+  border-radius: 10px;
+}
+.rocket .text {
+  margin: 0 1rem;
+}
+.rocket ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 body {
   background-color: gray;
   height: 100vh;

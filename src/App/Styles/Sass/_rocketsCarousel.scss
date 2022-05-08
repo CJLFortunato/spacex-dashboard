@@ -1,0 +1,51 @@
+.rockets-carousel {
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        width: 1.5rem;
+    }
+
+
+    .carousel {
+        border: 1px solid blueviolet;
+        overflow: hidden;
+        width: 85%;
+
+        .inner {
+            border: 1px solid blue;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            white-space: nowrap;
+            transition: transform 0.3s ;
+        }
+    }
+}
+
+.rocket {
+    height: 280px;
+    margin: 0 10px;
+    border: 1px solid green;
+    width: 300px;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+
+    img {
+        border-radius: 10px;
+    }
+
+    .text {
+        margin: 0 1rem;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}

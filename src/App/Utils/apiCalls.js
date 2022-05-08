@@ -138,3 +138,42 @@ export const callLaunchesAPIUpcoming = async () => {
     // console.log(data);
     return data;
 };
+
+export const callRocketsAPI = async () => {
+
+    const body = {
+        "query": {},
+        "options": {
+            "select": {
+                "name": 1,
+                "active": 1,
+                "height.meters": 1,
+                "mass.kg": 1,
+                "reusable": 1,
+                "cost_per_launch": 1,
+                "flickr_images": 1,
+                "success_rate_pct": 1,
+                "first_flight": 1
+            },
+            "pagination": false,
+        }
+    };
+
+    const response = await fetch('https://api.spacexdata.com/v4/rockets/query', {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify(body)
+    });
+
+    let data;
+
+    if(response.ok) {
+        data = await response.json();
+    } else {
+        data = {};
+    }
+    // console.log(data);
+    return data;
+};

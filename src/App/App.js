@@ -9,7 +9,13 @@ import { Upcoming } from './Components/Other_components/Upcoming';
 import { RocketsCarousel } from './Components/Rockets_components/RocketsCarousel';
 import { Timeline } from './Components/Timeline_components/Timeline';
 
-import { callHistoryAPI, callRoadsterAPI, callLaunchesAPI, callLaunchesAPIUpcoming } from './Utils/apiCalls';
+import { 
+  callHistoryAPI, 
+  callRoadsterAPI, 
+  callLaunchesAPI, 
+  callLaunchesAPIUpcoming,
+  callRocketsAPI
+} from './Utils/apiCalls';
 
 import './normalize.css';
 import './Styles/CSS/styles.css';
@@ -22,6 +28,7 @@ function App() {
   const [ roadsterData, setRoadsterData ] = useState([]);
   const [ launchData, setLaunchData ] = useState([]);
   const [ upcoming, setUpcoming ] = useState([]);
+  const [ rocketData, setRocketData ] =useState([]);
 
 
   useEffect(() => {
@@ -52,6 +59,12 @@ function App() {
       setUpcoming(data);
     }
     getUpcoming();
+
+    const getRocketData = async () => {
+      const data = await callRocketsAPI();
+      setRocketData(data.docs);
+    }
+    getRocketData();
   }, []);
 
   
@@ -65,7 +78,7 @@ function App() {
       <Title />
       <Map />
       <Timeline data={historyData}/>
-      <RocketsCarousel />
+      <RocketsCarousel data={rocketData}/>
       <Upcoming data={upcoming}/>
       <NbLaunches data={launchData}/>
       <CarData data={roadsterData}/>

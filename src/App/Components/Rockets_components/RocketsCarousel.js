@@ -2,12 +2,20 @@ import React from "react";
 
 import { Rocket } from "./Rocket";
 
-export function RocketsCarousel() {
+export function RocketsCarousel(props) {
+
+    const data = props.data? props.data : [];
+    // console.log(data);
 
     return ( 
         <div className="rockets-carousel">
-            <h2>Rocket types</h2>
-            <Rocket />
+            <button>-</button>
+            <div className="carousel">
+                <div className="inner">
+                   {data.map(rocket => <Rocket data={rocket} key={rocket.id}/>)} 
+                </div>
+            </div>
+            <button>+</button>
         </div> 
     );
 }
