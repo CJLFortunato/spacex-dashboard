@@ -9,7 +9,7 @@ import { Upcoming } from './Components/Other_components/Upcoming';
 import { RocketsCarousel } from './Components/Rockets_components/RocketsCarousel';
 import { Timeline } from './Components/Timeline_components/Timeline';
 
-import { callHistoryAPI, callRoadsterAPI, callLaunchesAPI } from './Utils/apiCalls';
+import { callHistoryAPI, callRoadsterAPI, callLaunchesAPI, callLaunchesAPIUpcoming } from './Utils/apiCalls';
 
 import './normalize.css';
 import './Styles/CSS/styles.css';
@@ -21,11 +21,10 @@ function App() {
   const [ historyData, setHistoryData ] = useState([]);
   const [ roadsterData, setRoadsterData ] = useState([]);
   const [ launchData, setLaunchData ] = useState([]);
+  const [ upcoming, setUpcoming ] = useState([]);
 
 
   useEffect(() => {
-
-    console.log('test useEffect');
 
     const getRoadsterData = async() => {
 
@@ -48,13 +47,18 @@ function App() {
     }
     getHistoryData();
 
+    const getUpcoming = async () => {
+      const data = await callLaunchesAPIUpcoming();
+      setUpcoming(data);
+    }
+    getUpcoming();
   }, []);
 
   
 
-  console.log(historyData);
-  console.log(launchData);
-  console.log(roadsterData);
+  // console.log(historyData);
+  // console.log(launchData);
+  // console.log(roadsterData);
 
   return (
     <main className="App">
@@ -62,7 +66,7 @@ function App() {
       <Map />
       <Timeline data={historyData}/>
       <RocketsCarousel />
-      <Upcoming />
+      <Upcoming data={upcoming}/>
       <NbLaunches data={launchData}/>
       <CarData data={roadsterData}/>
       <DonutChart data={launchData}/>

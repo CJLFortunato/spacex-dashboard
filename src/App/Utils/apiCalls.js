@@ -26,7 +26,7 @@ export const callHistoryAPI = async () => {
     }
 
     const data = await response.json() ;
-    console.log(data);
+    // console.log(data);
     return data;
 };
 
@@ -54,7 +54,7 @@ export const callRoadsterAPI = async () => {
     }
 
     const data = await response.json() ;
-    console.log(data);
+    // console.log(data);
     return data;
 };
 
@@ -98,6 +98,43 @@ export const callLaunchesAPI = async () => {
     } else {
         data = {};
     }
-    console.log(data);
+    // console.log(data);
+    return data;
+};
+
+export const callLaunchesAPIUpcoming = async () => {
+
+    const body = {
+        "query":{
+            "upcoming":true
+         },
+         "options":{
+            "limit":1,
+            "sort":{
+               "flight_number":"asc"
+            },
+            "select": {
+                "date_utc": 1,
+                "name": 1
+            }
+         }
+    };
+
+    const response = await fetch('https://api.spacexdata.com/v4/launches/query', {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify(body)
+    });
+
+    let data;
+
+    if(response.ok) {
+        data = await response.json();
+    } else {
+        data = {};
+    }
+    // console.log(data);
     return data;
 };
