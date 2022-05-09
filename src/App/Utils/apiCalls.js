@@ -193,7 +193,7 @@ export const callLandPadsAPI = async () => {
                 "latitude": 1,
                 "longitude": 1
             },
-            "pagination": false,
+            "pagination": false
         }
     };
 

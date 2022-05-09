@@ -6,12 +6,12 @@ export function MapPins(props) {
 
     const data = props.data;
 
-    const color = props.type === 'landpad'? 'dodgerblue' : 'pink';
+    const color = props.type === 'landpad'? 'blue' : 'fuchsia';
     const style = { color: color};
 
   return (
       <div className="map-pin">
-          <p style={style}>{data.full_name}</p>
+          <p style={style}><i class="fa-solid fa-location-dot"></i></p>
       </div>
   );
 }
