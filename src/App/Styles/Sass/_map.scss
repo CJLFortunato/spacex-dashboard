@@ -9,6 +9,15 @@ GoogleMapReact {
 }
 
 .map-pin {
-    border: 1px solid red;
+    // border: 1px solid red;
+    font-size: 2rem;
+
+    p {
+        margin: 0;
+    }
+
+    i {
+        -webkit-text-stroke: 3px black;
+    }
 
 }

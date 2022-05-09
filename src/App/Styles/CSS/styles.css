@@ -81,7 +81,13 @@ GoogleMapReact {
 }
 
 .map-pin {
-  border: 1px solid red;
+  font-size: 2rem;
+}
+.map-pin p {
+  margin: 0;
+}
+.map-pin i {
+  -webkit-text-stroke: 3px black;
 }
 
 body {
