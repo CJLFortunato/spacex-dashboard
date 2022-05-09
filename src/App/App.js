@@ -2,7 +2,8 @@ import React, { useEffect, useState, useLayoutEffect } from 'react';
 
 import { Map } from './Components/Map_components/Map';
 import { CarData } from './Components/Other_components/CarData';
-import { DonutChart } from './Components/Other_components/DonutChart';
+import { SuccessChart } from './Components/Charts/SuccessChart';
+import { CrewChart } from './Components/Charts/CrewChart';
 import { NbLaunches } from './Components/Other_components/NbLaunches';
 import { Title } from './Components/Other_components/Title';
 import { Upcoming } from './Components/Other_components/Upcoming';
@@ -19,8 +20,10 @@ import {
   callLandPadsAPI
 } from './Utils/apiCalls';
 
+
 import './normalize.css';
 import './Styles/CSS/styles.css';
+import { RocketChart } from './Components/Charts/RocketChart';
 
 
 
@@ -84,7 +87,6 @@ function App() {
   }, []);
 
   
-
   // console.log(historyData);
   // console.log(launchData);
   // console.log(roadsterData);
@@ -98,9 +100,12 @@ function App() {
       <Upcoming data={upcoming}/>
       <NbLaunches data={launchData}/>
       <CarData data={roadsterData}/>
-      <DonutChart data={launchData}/>
-      <DonutChart data={launchData}/>
-      <DonutChart data={launchData}/>
+      <div className="charts">
+      <SuccessChart data={launchData.docs}/>;
+      <CrewChart data={launchData.docs}/>;
+      <RocketChart data={launchData.docs}/>
+      </div>
+      
       
     </main>
   );
