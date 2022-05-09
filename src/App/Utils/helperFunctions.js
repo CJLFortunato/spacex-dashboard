@@ -63,7 +63,7 @@ export const getLaunchesByRocket = (data = []) =>{
         }
     }
         
-    console.log(dataset);
+    // console.log(dataset);
     
     return dataset;
 };

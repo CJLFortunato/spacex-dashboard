@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react';
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
 import { Map } from './Components/Map_components/Map';
+import { MapPins } from './Components/Map_components/MapPins';
 import { CarData } from './Components/Other_components/CarData';
 import { SuccessChart } from './Components/Charts/SuccessChart';
 import { CrewChart } from './Components/Charts/CrewChart';
@@ -86,7 +88,12 @@ function App() {
 
   }, []);
 
+  const render = (status) => {
+    return <p>{status}</p>;
+  };
   
+  const API_KEY = process.env.REACT_APP_MAPS_API_KEY;
+
   // console.log(historyData);
   // console.log(launchData);
   // console.log(roadsterData);
@@ -94,19 +101,17 @@ function App() {
   return (
     <main className="App">
       <Title />
-      <Map data={padsData}/>
+      <Map data={padsData}></Map>
       <Timeline data={historyData}/>
       <RocketsCarousel data={rocketData}/>
       <Upcoming data={upcoming}/>
       <NbLaunches data={launchData}/>
       <CarData data={roadsterData}/>
       <div className="charts">
-      <SuccessChart data={launchData.docs}/>;
-      <CrewChart data={launchData.docs}/>;
-      <RocketChart data={launchData.docs}/>
-      </div>
-      
-      
+        <SuccessChart data={launchData.docs}/>;
+        <CrewChart data={launchData.docs}/>;
+        <RocketChart data={launchData.docs}/>
+      </div> 
     </main>
   );
 }

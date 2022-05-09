@@ -9,9 +9,9 @@ export function MapPins(props) {
     const color = props.type === 'landpad'? 'dodgerblue' : 'pink';
     const style = { color: color};
 
-    return ( 
-        <div className="map-pins">
-            <h4 style={style}>{data.full_name}</h4>
-        </div> 
-    );
+  return (
+      <div className="map-pin">
+          <p style={style}>{data.full_name}</p>
+      </div>
+  );
 }
