@@ -18,8 +18,8 @@ export function Rocket(props) {
                     <li><strong>Active: </strong>{data.active? "Active": "Inactive"}</li>
                     <li><strong>Height: </strong>{data.height.meters}m</li>
                     <li><strong>Mass: </strong>{data.mass.kg}kg</li>
-                    <li><strong>First Flight: </strong><br/>{readableDate}</li>
-                    <li><strong>Cost Per Launch: </strong><br/>{data.cost_per_launch}$</li>
+                    <li><strong>First Flight: </strong>{readableDate}</li>
+                    <li><strong>Cost Per Launch: </strong>{data.cost_per_launch}$</li>
                     <li><strong>Success rate: </strong>{data.success_rate_pct}%</li>
                 </ul>
             </div>

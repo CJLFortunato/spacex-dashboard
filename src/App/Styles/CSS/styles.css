@@ -52,28 +52,30 @@ h1 {
 .rocket {
   height: 280px;
   margin-right: 10px;
-  border: 1px solid green;
   padding: 1%;
   display: flex;
   flex-flow: row nowrap;
-}
-
-img {
-  width: 150px;
   border-radius: 10px;
-  object-fit: cover;
-  border: 1px solid red;
+  background-color: hsl(0deg, 0%, 90%);
 }
-
-.text {
-  margin: 0 0.5rem;
-  border: 1px solid blue;
-  width: 160px;
-}
-
-ul {
+.rocket ul {
   list-style: none;
   padding-left: 0;
+}
+.rocket ul li {
+  line-height: 2rem;
+}
+.rocket img {
+  width: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.rocket .text {
+  margin: 0 1rem;
+  width: 250px;
+}
+.rocket h3 {
+  margin: 0.5rem 0;
 }
 
 .map {

@@ -30,27 +30,40 @@
 .rocket {
     height: 280px;
     margin-right: 10px;
-    border: 1px solid green;
+    // border: 1px solid green;
     padding: 1%;
     display: flex;
     flex-flow: row nowrap;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 90%);
+    // width: 800px;
 
+    ul {
+        list-style: none;
+        padding-left: 0;
+    
+        li {
+            line-height: 2rem;
+        }
+    }
+
+    img {
+        width: 150px;
+        border-radius: 5px;
+        object-fit: cover;
+        // border: 1px solid red;
+    }
+    
+    .text {
+        margin: 0 1rem;
+        // border: 1px solid blue;
+        width: 250px;
+    }
+    
+    h3 {
+        margin: .5rem 0;
+    }
     
 }
-img {
-    width: 150px;
-    border-radius: 10px;
-    object-fit: cover;
-    border: 1px solid red;
-}
 
-.text {
-    margin: 0 .5rem;
-    border: 1px solid blue;
-    width: 160px;
-}
 
-ul {
-    list-style: none;
-    padding-left: 0;
-}
