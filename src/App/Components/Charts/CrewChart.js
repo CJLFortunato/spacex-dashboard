@@ -26,9 +26,11 @@ export function CrewChart(props) {
     const crewPct = (crewRate.manned / (crewRate.manned + crewRate.unmanned)) * 100;
     return ( 
         <div className="donut-chart">
-            
             <Doughnut data={chartData}/>
-            <h2>{crewPct.toFixed(1)}% manned launches</h2>
+            <div className="chart-title"> 
+                <h2 style={{ color: 'rgb(5, 200, 290)'}} >{crewPct.toFixed(1)}% </h2>
+                <p>Manned Launches</p>
+            </div>
         </div> 
     );
 }

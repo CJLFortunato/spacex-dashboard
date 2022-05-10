@@ -28,7 +28,10 @@ export function SuccessChart(props) {
         <div className="donut-chart">
             
             <Doughnut data={chartData}/>
-            <h2>Success rate: {successPct.toFixed(1)}%</h2>
+            <div className="chart-title"> 
+                <h2 style={{ color: 'rgb(5, 200, 90)'}}>{successPct.toFixed(1)}% </h2>
+                <p>Success rate</p>
+            </div>
         </div> 
     );
 }

@@ -12,6 +12,8 @@ export function RocketChart(props) {
     const launchNumberPerRocket = getLaunchesByRocket(props.data);
     const labels = Object.keys(launchNumberPerRocket);
 
+    console.log(launchNumberPerRocket);
+
     const generateChartColors = () => {
 
         const chartColors = [];
@@ -45,12 +47,17 @@ export function RocketChart(props) {
       ]
   };
 
-    const successPct = (56 / (56 + 456)) * 100;
+  const textColor = chartColors[labels.findIndex((rocket) => rocket === "Falcon 9")];
+
+    const falcon9Pct = (launchNumberPerRocket["Falcon 9"] / (launchNumberPerRocket["Falcon 9"] + launchNumberPerRocket["Falcon 1"] + launchNumberPerRocket["Falcon Heavy"])) * 100;
     return ( 
-        <div className="donut-chart">
+        <div className="donut-chart ">
             
-            <Doughnut data={chartData}/>
-            <h3>Number of launches per rocket type</h3>
+            <Doughnut data={chartData} className="doughnut"/>
+            <div className="chart-title rocket-type"> 
+                <h2 style={{ color: textColor }}>{falcon9Pct.toFixed(1)}% </h2>
+                <p>of launches were Falcon 9 rockets</p>
+            </div>
         </div> 
     );
 }

@@ -108,8 +108,8 @@ function App() {
       <NbLaunches data={launchData}/>
       <CarData data={roadsterData}/>
       <div className="charts">
-        <SuccessChart data={launchData.docs}/>;
-        <CrewChart data={launchData.docs}/>;
+        <SuccessChart data={launchData.docs}/>
+        <CrewChart data={launchData.docs}/>
         <RocketChart data={launchData.docs}/>
       </div> 
     </main>

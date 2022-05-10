@@ -1,12 +1,22 @@
 .nb-launches {
 
+  h2 {
+    text-align: center;
+
+    span {
+      color: dodgerblue;
+      font-size: larger;
+    }
+  }
+
     ul {
 
         // border: 1px solid teal;
         display: flex;
         flex-flow: column wrap;
         max-height: 60%;
-        padding-left: 10px;
+        padding-left: 18%;
+        justify-content: center;
 
       li {
         list-style-type: none;

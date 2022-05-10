@@ -7,11 +7,14 @@
 
     button {
         width: 1.5rem;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
     }
 
 
     .carousel {
-        border: 1px solid grey;
+        // border: 1px solid grey;
         overflow: hidden;
         width: 85%;
 
@@ -35,7 +38,7 @@
     display: flex;
     flex-flow: row nowrap;
     border-radius: 10px;
-    background-color: hsl(0, 0%, 90%);
+    background-color: hsla(0, 0%, 0%, 0.5);
     // width: 800px;
 
     ul {
