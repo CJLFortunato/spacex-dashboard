@@ -7,10 +7,13 @@ export function Upcoming(props) {
 
     // console.log(data);
 
+    const date = new Date(data.date_utc);
+    const readableDate = date.toLocaleString('fr-FR');
+
     return ( 
         <div className="upcoming">
             <h2>Upcoming launch</h2>
-            <h2>{data.date_utc}</h2>
+            <h2>{readableDate}</h2>
             <p>{data.name}</p>
         </div> 
     );
