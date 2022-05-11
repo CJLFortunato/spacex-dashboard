@@ -11,11 +11,16 @@ GoogleMapReact {
 .map-pin {
     // border: 1px solid red;
     
+
+    h3 {
+     color: black;   
+    }
     margin: 0;
     padding: 0;
     p {
         margin: 0;
         padding: 0;
+        
     }
 
     i {
@@ -30,4 +35,5 @@ GoogleMapReact {
 }
 .pad-data {
         background-color: white;
+        color: black;
 }

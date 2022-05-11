@@ -23,8 +23,8 @@ export function Map(props) {
                 zoom={zoom}
                 onChange={({ center, zoom }) => { setCenter(center); setZoom(zoom) }}
             >   
-                {landpads.map(pad => <MapPins data={pad} key={pad.id} type={'landpad'} lat={pad.latitude} lng={pad.longitude}/>)}
-                {launchpads.map(pad => <MapPins data={pad} key={pad.id} type={'launchpad'} lat={pad.latitude} lng={pad.longitude}/>)}
+                {landpads.map(pad => <MapPins data={pad} key={pad.id} type={'landpad'} lat={pad.latitude} lng={pad.longitude} collect={props.collect} toggle={props.toggle}/>)}
+                {launchpads.map(pad => <MapPins data={pad} key={pad.id} type={'launchpad'} lat={pad.latitude} lng={pad.longitude} collect={props.collect} toggle={props.toggle}/>)}
             </GoogleMapReact>
 
 

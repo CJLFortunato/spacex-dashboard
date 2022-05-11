@@ -182,6 +182,13 @@ span {
 .pin-details h3 {
   margin-bottom: 10px;
 }
+.pin-details button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  position: absolute;
+  left: 91%;
+}
 @keyframes slidein {
   from {
     top: -20%;

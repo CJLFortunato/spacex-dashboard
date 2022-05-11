@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 export function MapPins(props) {
 
-    const [ displayData, setDisplayData ] = useState(false);
-    
-    // console.log(props);
+     //console.log(props);
 
     const data = props.data;
+    const collectData = props.collect;
+
 
     const color = props.type === 'landpad'? '#163fef' : '#ab132c';
     const style = { color: color};
@@ -20,12 +20,16 @@ export function MapPins(props) {
         <p>Success rate: {data.landing_attemps / data.landing_successes}</p>
     </div>;
 
-    //{ displayData && details}
+    const handleClick = () => {
+
+        const dataWithType = { ...data, type: props.type }
+        collectData(dataWithType);
+        props.toggle();
+    }
 
   return (
-      <div className="map-pin" onMouseOver={() => setDisplayData(true)} onMouseOut={() => setDisplayData(false)}>     
+      <div className="map-pin" onClick={handleClick}>     
           <p style={style}><i className="fa-solid fa-location-dot"></i></p>
-          <h3>{data.full_name}</h3>
       </div>
   );
 }
