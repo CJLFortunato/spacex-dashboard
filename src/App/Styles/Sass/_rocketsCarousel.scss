@@ -70,4 +70,41 @@
     
 }
 
+@media only screen and (max-width: 480px) {
 
+    .rockets-carousel {
+
+
+
+        button {
+            display: none;
+        }
+        .carousel {
+           overflow: unset;
+
+           width: 100%;
+
+           .inner {
+            white-space: initial;
+            flex-flow: column nowrap;
+            align-items: center;
+            width: 100%;
+        }
+
+        }
+        
+        
+        .rocket {
+            width: 98%;
+            margin-top: 1rem;
+            ul {
+            
+                li {
+                    line-height: 1.5rem;
+                    
+                }
+            }
+
+        }
+    }
+}

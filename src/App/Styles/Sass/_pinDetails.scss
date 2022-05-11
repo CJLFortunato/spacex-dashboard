@@ -31,3 +31,28 @@
         }
     }
 }
+@media only screen and (max-width: 480px) { 
+
+    .pin-details {
+
+        padding: 2%;
+        background-color: black;
+
+        button {
+            font-size: 2rem;
+            position: absolute;
+            left: 90%;
+            top: 0;
+        }
+    }
+
+    @keyframes slidein {
+        from {
+            top: 2000px;
+        }
+        to {
+            top: 2300px;
+        }
+    }
+
+}

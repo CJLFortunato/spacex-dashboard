@@ -9,9 +9,10 @@ export function RocketsCarousel(props) {
     const [activeIndex, setActiveIndex] = useState(0);
     const [paused, setPaused] = useState(false);
 
+    
     const updateIndex = (newIndex) => {
         const nbCards = document.getElementsByClassName("rocket").length;
-        console.log(nbCards);
+        
         if (newIndex < 0) {
             newIndex = nbCards -1;
         } else if (newIndex >= nbCards) {
@@ -22,20 +23,31 @@ export function RocketsCarousel(props) {
     }
 
     useEffect(( )=> {
-        const interval = setInterval(() => {
 
-            if(!paused) {
-               updateIndex(activeIndex + 1); 
-            }
-            
-        }, 10000);
+        if(window.screen.width < 1024) {
+            return;
+        } else {
+            const interval = setInterval(() => {
 
-        return () => {
-            if(interval) {
-                clearInterval(interval);
-            }
-        };
+                if(!paused) {
+                   updateIndex(activeIndex + 1); 
+                }
+                
+            }, 10000);
+    
+            return () => {
+                if(interval) {
+                    clearInterval(interval);
+                }
+            };
+        }
+    
+        
     });
+
+
+        
+
 
     return ( 
         <div className="rockets-carousel">

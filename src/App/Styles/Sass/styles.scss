@@ -9,6 +9,7 @@
 @use 'upcoming';
 
 
+
 body {
     background-image: url(../../../Ressources/spacex-uj3hvdfQujI-unsplash.jpg); 
     background-size: cover;
@@ -101,4 +102,61 @@ main {
 
 p, h2, h3, li {
     color: white;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    body {
+        background-image: none;
+        background-color: hsl(200, 50%, 30%);
+        height: unset;
+    }
+    
+    main {
+        // border: 3px dashed brown;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+    }
+
+    .upcoming {
+        align-items: center;
+
+        .upcoming-date {
+            text-align: center;
+        }
+    }
+    .nb-launches {
+        height: 300px;
+    }
+    .map {
+       width: 100%;
+       height: 800px;
+    }
+    .charts {
+       
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .donut-chart {
+
+        width: 100%;
+        margin-bottom: 1rem;
+        
+    }
+    .timeline {
+        overflow: visible;
+    }
+    .pin-details {
+        position: absolute;
+        align-self: center;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+    }
+
 }

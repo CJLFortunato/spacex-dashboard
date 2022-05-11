@@ -107,18 +107,18 @@ function App() {
   return (
     <main className="App">
       <Title />
-      {displayPinDetails && <PinDetails data={mapPinData}  toggle={togglePinDetails}/>}
-      <Map data={padsData} collect={collectMapPinData} toggle={togglePinDetails}></Map>
-      <Timeline data={historyData}/>
-      <RocketsCarousel data={rocketData}/>
       <Upcoming data={upcoming}/>
       <NbLaunches data={launchData}/>
       <CarData data={roadsterData}/>
+      <RocketsCarousel data={rocketData}/>
+      {displayPinDetails && <PinDetails data={mapPinData}  toggle={togglePinDetails}/>}
+      <Map data={padsData} collect={collectMapPinData} toggle={togglePinDetails}></Map>
       <div className="charts">
         <SuccessChart data={launchData.docs}/>
         <CrewChart data={launchData.docs}/>
         <RocketChart data={launchData.docs}/>
       </div> 
+      <Timeline data={historyData}/>
     </main>
   );
 }

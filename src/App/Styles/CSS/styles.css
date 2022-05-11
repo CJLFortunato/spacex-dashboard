@@ -100,6 +100,28 @@ h1 {
   margin: 0.5rem 0;
 }
 
+@media only screen and (max-width: 480px) {
+  .rockets-carousel button {
+    display: none;
+  }
+  .rockets-carousel .carousel {
+    overflow: unset;
+    width: 100%;
+  }
+  .rockets-carousel .carousel .inner {
+    white-space: initial;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+  }
+  .rockets-carousel .rocket {
+    width: 98%;
+    margin-top: 1rem;
+  }
+  .rockets-carousel .rocket ul li {
+    line-height: 1.5rem;
+  }
+}
 .map {
   padding: 0;
 }
@@ -174,6 +196,25 @@ GoogleMapReact {
   top: -196px;
 }
 
+@media only screen and (max-width: 480px) {
+  .donut-chart {
+    height: 350px;
+  }
+
+  .chart-title {
+    position: relative;
+    top: -240px;
+    font-size: 2.4rem;
+  }
+
+  .rocket-type p {
+    font-size: 1.15rem;
+  }
+  .rocket-type .chart-title {
+    position: relative;
+    top: -220px;
+  }
+}
 .car-data {
   text-align: center;
   display: flex;
@@ -215,6 +256,27 @@ span {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .pin-details {
+    padding: 2%;
+    background-color: black;
+  }
+  .pin-details button {
+    font-size: 2rem;
+    position: absolute;
+    left: 90%;
+    top: 0;
+  }
+
+  @keyframes slidein {
+    from {
+      top: 2000px;
+    }
+    to {
+      top: 2300px;
+    }
+  }
+}
 .upcoming {
   display: flex;
   flex-direction: column;
@@ -334,6 +396,61 @@ main {
 
 p, h2, h3, li {
   color: white;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-image: none;
+    background-color: hsl(200deg, 50%, 30%);
+    height: unset;
+  }
+
+  main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+  }
+
+  .upcoming {
+    align-items: center;
+  }
+  .upcoming .upcoming-date {
+    text-align: center;
+  }
+
+  .nb-launches {
+    height: 300px;
+  }
+
+  .map {
+    width: 100%;
+    height: 800px;
+  }
+
+  .charts {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .donut-chart {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .timeline {
+    overflow: visible;
+  }
+
+  .pin-details {
+    position: absolute;
+    align-self: center;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

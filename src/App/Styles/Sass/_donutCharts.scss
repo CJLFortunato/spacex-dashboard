@@ -41,3 +41,27 @@
         top: -196px;
      }
 }
+
+@media only screen and (max-width: 480px) {
+
+    .donut-chart {
+        height: 350px;
+    }
+
+    .chart-title {
+        // background-color: transparentize($color: #000000, $amount: 0.5);
+        position: relative;
+        top: -240px;
+        font-size: 2.4rem;
+    }
+    .rocket-type {
+         p {
+            font-size: 1.15rem; 
+         }
+         .chart-title {
+            position: relative;
+            top: -220px;
+         }
+    }
+
+}
