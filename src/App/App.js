@@ -26,6 +26,7 @@ import {
 import './normalize.css';
 import './Styles/CSS/styles.css';
 import { RocketChart } from './Components/Charts/RocketChart';
+import { PinDetails } from './Components/Map_components/PinDetails';
 
 
 
@@ -35,11 +36,13 @@ function App() {
   const [ roadsterData, setRoadsterData ] = useState([]);
   const [ launchData, setLaunchData ] = useState([]);
   const [ upcoming, setUpcoming ] = useState([]);
-  const [ rocketData, setRocketData ] =useState([]);
-  const [ padsData, setPadsData ] =useState([]);
+  const [ rocketData, setRocketData ] = useState([]);
+  const [ padsData, setPadsData ] = useState([]);
+  const [ mapPinData, setMapPinData ] = useState({});
+  const [ displayPinDetails, setDisplayPinDetails ] = useState(false);
 
 
-  useEffect(() => {
+  useEffect(() => { //API calls
 
     const getRoadsterData = async() => {
 
@@ -88,20 +91,24 @@ function App() {
 
   }, []);
 
-  const render = (status) => {
-    return <p>{status}</p>;
-  };
-  
-  const API_KEY = process.env.REACT_APP_MAPS_API_KEY;
 
   // console.log(historyData);
   // console.log(launchData);
   // console.log(roadsterData);
 
+  const collectMapPinData = (data) => {
+    setMapPinData(data);
+  };
+
+  const togglePinDetails = () => {
+    setDisplayPinDetails(!displayPinDetails);
+  }
+
   return (
     <main className="App">
       <Title />
-      <Map data={padsData}></Map>
+      {displayPinDetails && <PinDetails data={mapPinData}  toggle={togglePinDetails}/>}
+      <Map data={padsData} collect={collectMapPinData} toggle={togglePinDetails}></Map>
       <Timeline data={historyData}/>
       <RocketsCarousel data={rocketData}/>
       <Upcoming data={upcoming}/>

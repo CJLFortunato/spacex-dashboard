@@ -5,10 +5,7 @@
 @use 'map';
 @use 'donutCharts';
 @use 'carData';
-
-* {
-    color: white;
-}
+@use 'pinDetails';
 
 
 body {
@@ -93,4 +90,14 @@ main {
     @include component();
     grid-column: 1 / 3;
     grid-row: 4 / 5;
+}
+.pin-details {
+    position: absolute;
+    left: 40%;
+    width: 30%;
+    z-index: 20;
+}
+
+p, h2, h3, li {
+    color: white;
 }

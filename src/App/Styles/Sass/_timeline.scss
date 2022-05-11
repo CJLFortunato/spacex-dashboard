@@ -1,5 +1,31 @@
+@mixin scrollbars(
+  $size: 10px,
+  $foreground-color: white,
+  $background-color: black
+) {
+  // For Chrome & Safari
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // Standard version (Firefox only for now)
+  scrollbar-color: $foreground-color $background-color;
+  scrollbar-width: thin;
+
+}
+
+
+
 .timeline {
     overflow: scroll;
+    @include scrollbars();
 }
 
 .event {
@@ -11,3 +37,5 @@
         margin: 0;
     }
 }
+
+
