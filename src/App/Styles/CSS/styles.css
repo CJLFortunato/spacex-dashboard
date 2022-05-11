@@ -56,6 +56,7 @@ h1 {
   background-color: transparent;
   border: none;
   font-size: 2rem;
+  color: white;
 }
 .rockets-carousel .carousel {
   overflow: hidden;
@@ -231,9 +232,9 @@ span {
 }
 
 body {
-  background-image: url(../../../Ressources/nasa-yZygONrUBe8-unsplash.jpg);
+  background-image: url(../../../Ressources/spacex-uj3hvdfQujI-unsplash.jpg);
   background-size: cover;
-  background-position: right 35% bottom 45%;
+  background-position: right 45%;
   height: 100vh;
   width: 100vw;
   display: flex;
