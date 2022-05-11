@@ -13,7 +13,7 @@ export function Upcoming(props) {
     return ( 
         <div className="upcoming">
             <h2>Upcoming launch</h2>
-            <h2>{readableDate}</h2>
+            <h2 className="upcoming-date">{readableDate}</h2>
             <p>{data.name}</p>
         </div> 
     );

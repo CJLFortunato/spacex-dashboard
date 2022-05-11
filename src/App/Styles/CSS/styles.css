@@ -198,6 +198,22 @@ span {
   }
 }
 
+.upcoming {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.upcoming h2, .upcoming p {
+  margin: 0;
+}
+.upcoming .upcoming-date {
+  color: dodgerblue;
+  font-size: 3rem;
+}
+.upcoming p {
+  font-size: 1.4rem;
+}
+
 body {
   background-image: url(../../../Ressources/nasa-yZygONrUBe8-unsplash.jpg);
   background-size: cover;
