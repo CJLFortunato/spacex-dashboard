@@ -135,26 +135,42 @@ GoogleMapReact {
   color: black;
 }
 
+.donut-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.donut-chart p {
+  margin: 0;
+  font-size: 1.5rem;
+  position: relative;
+  top: -35px;
+  text-align: center;
+}
+
+.donut {
+  transform: scale(90%);
+  margin: 0 0 5px 0;
+  position: relative;
+  top: -24px;
+}
+
 .chart-title {
-  background-color: transparent;
   position: relative;
   text-align: center;
-  top: -160px;
+  top: -215px;
   z-index: 10;
   padding: 1% 0;
-}
-.chart-title h2 {
   margin: 0;
   font-size: 2rem;
 }
-.chart-title p {
-  margin: 0;
-  font-size: 1.1rem;
-}
 
-.rocket-type {
+.rocket-type p {
+  font-size: 1.15rem;
+}
+.rocket-type .chart-title {
   position: relative;
-  top: -150px;
+  top: -196px;
 }
 
 .car-data {

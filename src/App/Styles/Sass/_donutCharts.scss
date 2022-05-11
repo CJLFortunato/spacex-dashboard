@@ -1,21 +1,43 @@
-.chart-title {
-    background-color: transparent;
-    position: relative;
-    text-align: center;
-    top: -160px;
-    z-index: 10;
-    padding: 1% 0;
+.donut-chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-    h2 {
-        margin: 0;
-        font-size: 2rem;
-    }
     p {
         margin: 0;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+        position: relative;
+        top: -35px;
+        text-align: center;
     }
 }
-.rocket-type {
+
+.donut {
+    transform: scale(90%);
+    // border: 1px solid blue;
+    margin: 0 0 5px 0;
     position: relative;
-    top: -150px;
+    top: -24px
+}
+
+.chart-title {
+    // background-color: transparentize($color: #000000, $amount: 0.5);
+    position: relative;
+    text-align: center;
+    top: -215px;
+    z-index: 10;
+    padding: 1% 0;
+    margin: 0;
+    font-size: 2rem;
+
+    
+}
+.rocket-type {
+     p {
+        font-size: 1.15rem; 
+     }
+     .chart-title {
+        position: relative;
+        top: -196px;
+     }
 }

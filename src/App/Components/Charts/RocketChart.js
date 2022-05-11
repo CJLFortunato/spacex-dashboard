@@ -51,13 +51,14 @@ export function RocketChart(props) {
 
     const falcon9Pct = (launchNumberPerRocket["Falcon 9"] / (launchNumberPerRocket["Falcon 9"] + launchNumberPerRocket["Falcon 1"] + launchNumberPerRocket["Falcon Heavy"])) * 100;
     return ( 
-        <div className="donut-chart ">
-            
-            <Doughnut data={chartData} className="doughnut"/>
-            <div className="chart-title rocket-type"> 
-                <h2 style={{ color: textColor }}>{falcon9Pct.toFixed(1)}% </h2>
-                <p>of launches were Falcon 9 rockets</p>
+        <div className="donut-chart rocket-type">
+            <div className="donut">
+               <Doughnut data={chartData}/> 
             </div>
-        </div> 
+                <p>of launches were Falcon 9 rockets</p>
+                <h2 className="chart-title " style={{ color: textColor }}>{falcon9Pct.toFixed(1)}% </h2>
+                
+            </div>
+
     );
 }
