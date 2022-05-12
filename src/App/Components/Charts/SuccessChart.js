@@ -1,6 +1,6 @@
 import React from "react";
 import { Doughnut } from 'react-chartjs-2';
-import { Chart, registerables, ArcElement } from "chart.js";
+import { Chart, registerables } from "chart.js";
 
 import { getSuccessRate } from '../../Utils/helperFunctions';
 

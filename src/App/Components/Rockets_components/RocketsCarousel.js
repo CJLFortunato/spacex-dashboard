@@ -5,7 +5,6 @@ import { Rocket } from "./Rocket";
 export function RocketsCarousel(props) {
 
     const data = props.data? props.data : [];
-    // console.log(data);
     const [activeIndex, setActiveIndex] = useState(0);
     const [paused, setPaused] = useState(false);
 

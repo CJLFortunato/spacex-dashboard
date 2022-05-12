@@ -1,8 +1,6 @@
-import React, { useEffect, useState, useLayoutEffect } from 'react';
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import React, { useEffect, useState } from 'react';
 
 import { Map } from './Components/Map_components/Map';
-import { MapPins } from './Components/Map_components/MapPins';
 import { CarData } from './Components/Other_components/CarData';
 import { SuccessChart } from './Components/Charts/SuccessChart';
 import { CrewChart } from './Components/Charts/CrewChart';
@@ -11,6 +9,8 @@ import { Title } from './Components/Other_components/Title';
 import { Upcoming } from './Components/Other_components/Upcoming';
 import { RocketsCarousel } from './Components/Rockets_components/RocketsCarousel';
 import { Timeline } from './Components/Timeline_components/Timeline';
+import { RocketChart } from './Components/Charts/RocketChart';
+import { PinDetails } from './Components/Map_components/PinDetails';
 
 import { 
   callHistoryAPI, 
@@ -25,8 +25,7 @@ import {
 
 import './normalize.css';
 import './Styles/CSS/styles.css';
-import { RocketChart } from './Components/Charts/RocketChart';
-import { PinDetails } from './Components/Map_components/PinDetails';
+
 
 
 
@@ -90,11 +89,6 @@ function App() {
     getPadsData();
 
   }, []);
-
-
-  // console.log(historyData);
-  // console.log(launchData);
-  // console.log(roadsterData);
 
   const collectMapPinData = (data) => {
     setMapPinData(data);

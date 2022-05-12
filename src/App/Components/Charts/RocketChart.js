@@ -1,6 +1,6 @@
 import React from "react";
 import { Doughnut } from 'react-chartjs-2';
-import { Chart, registerables, ArcElement } from "chart.js";
+import { Chart, registerables } from "chart.js";
 
 import { getLaunchesByRocket, colorGenerator } from '../../Utils/helperFunctions';
 
@@ -12,9 +12,7 @@ export function RocketChart(props) {
     const launchNumberPerRocket = getLaunchesByRocket(props.data);
     const labels = Object.keys(launchNumberPerRocket);
 
-    // console.log(launchNumberPerRocket);
-
-    const generateChartColors = () => {
+    const generateChartColors = () => { // Generate chart colors based on the label to make sure colors are always the same.
 
         const chartColors = [];
 

@@ -15,12 +15,10 @@
 
 
     .carousel {
-        // border: 1px solid grey;
         overflow: hidden;
         width: 85%;
 
         .inner {
-            // border: 1px solid blue;
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
@@ -34,13 +32,11 @@
 .rocket {
     height: 280px;
     margin-right: 10px;
-    // border: 1px solid green;
     padding: 1%;
     display: flex;
     flex-flow: row nowrap;
     border-radius: 10px;
     background-color: hsla(0, 0%, 0%, 0.5);
-    // width: 800px;
 
     ul {
         list-style: none;
@@ -55,12 +51,10 @@
         width: 150px;
         border-radius: 5px;
         object-fit: cover;
-        // border: 1px solid red;
     }
     
     .text {
         margin: 0 1rem;
-        // border: 1px solid blue;
         width: 250px;
     }
     

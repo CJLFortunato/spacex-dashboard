@@ -2,10 +2,7 @@ import React from "react";
 
 export function Upcoming(props) {
 
-    // console.log(props);
     const data = props.data.docs? props.data.docs[0]: {};
-
-    // console.log(data);
 
     const date = new Date(data.date_utc);
     const readableDate = date.toLocaleString('fr-FR');

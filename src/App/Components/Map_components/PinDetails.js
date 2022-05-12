@@ -3,7 +3,6 @@ import React from "react";
 export function PinDetails(props) {
 
     const data = props.data;
-    // console.log(data);
 
     const color = data.type === 'landpad'? '#608df4' : '#f2587c';
     const style = { color: color};

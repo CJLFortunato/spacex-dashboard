@@ -4,7 +4,6 @@ import React from "react";
 export function Rocket(props) {
 
     const data = props.data;
-    // console.log(data);
 
     const date = new Date(data.first_flight);
     const readableDate = date.toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' });

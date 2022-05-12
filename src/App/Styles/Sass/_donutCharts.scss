@@ -14,14 +14,12 @@
 
 .donut {
     transform: scale(90%);
-    // border: 1px solid blue;
     margin: 0 0 5px 0;
     position: relative;
     top: -24px
 }
 
 .chart-title {
-    // background-color: transparentize($color: #000000, $amount: 0.5);
     position: relative;
     text-align: center;
     top: -215px;
@@ -49,7 +47,6 @@
     }
 
     .chart-title {
-        // background-color: transparentize($color: #000000, $amount: 0.5);
         position: relative;
         top: -240px;
         font-size: 2.4rem;

@@ -26,7 +26,6 @@ export const callHistoryAPI = async () => {
     }
 
     const data = await response.json() ;
-    // console.log(data);
     return data;
 };
 
@@ -54,7 +53,6 @@ export const callRoadsterAPI = async () => {
     }
 
     const data = await response.json() ;
-    // console.log(data);
     return data;
 };
 
@@ -98,7 +96,6 @@ export const callLaunchesAPI = async () => {
     } else {
         data = {};
     }
-    // console.log(data);
     return data;
 };
 
@@ -135,7 +132,6 @@ export const callLaunchesAPIUpcoming = async () => {
     } else {
         data = {};
     }
-    // console.log(data);
     return data;
 };
 
@@ -174,7 +170,6 @@ export const callRocketsAPI = async () => {
     } else {
         data = {};
     }
-    // console.log(data);
     return data;
 };
 
@@ -212,7 +207,6 @@ export const callLandPadsAPI = async () => {
     } else {
         data = {};
     }
-    // console.log(data);
     return data;
 };
 export const callLaunchPadsAPI = async () => {
@@ -249,6 +243,5 @@ export const callLaunchPadsAPI = async () => {
     } else {
         data = {};
     }
-    // console.log(data);
     return data;
 };

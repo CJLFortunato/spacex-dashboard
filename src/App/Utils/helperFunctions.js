@@ -18,8 +18,6 @@ export const getLaunchesByYear = (data = []) =>{
 
 export const getSuccessRate = (data = []) => {
 
-    // console.log(data);
-
     const counter = {
         successes: 0,
         failures: 0
@@ -35,8 +33,6 @@ export const getSuccessRate = (data = []) => {
 
 export const getCrewRate = (data = []) => {
 
-    //  console.log(data);
-
     const counter = {
         manned: 0,
         unmanned: 0
@@ -45,7 +41,6 @@ export const getCrewRate = (data = []) => {
     for (let launch of data) {
         launch.crew.length > 0 ? counter.manned++: counter.unmanned++;
     }
-    // console.log(counter);
     return counter;
 
 };
@@ -62,8 +57,6 @@ export const getLaunchesByRocket = (data = []) =>{
             dataset[rocketName] = 1;
         }
     }
-        
-    // console.log(dataset);
     
     return dataset;
 };
