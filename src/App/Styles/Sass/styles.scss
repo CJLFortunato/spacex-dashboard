@@ -8,7 +8,9 @@
 @use 'pinDetails';
 @use 'upcoming';
 
-
+* {
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
 
 body {
     background-image: url(../../../Ressources/spacex-uj3hvdfQujI-unsplash.jpg); 
@@ -26,8 +28,8 @@ body {
     width: 100%;
 }
 
-@mixin component() {
-    background-color: hsla(0, 0%, 0%, 0.8);
+@mixin component($color: hsla(0, 0%, 0%, 0.9)) {
+    background-color: $color;
     border-radius: 5px;
     padding: 10px;
 }
@@ -83,7 +85,7 @@ main {
     grid-row: 3 / 4;
 }
 .rockets-carousel {
-    @include component();
+    @include component(hsla(0, 0%, 0%, 0.7));
     grid-column: 1 / 3;
     grid-row: 4 / 5;
 }
