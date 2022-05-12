@@ -99,7 +99,7 @@ function App() {
   }
 
   return (
-    <main className="App">
+    <main className="App" data-testid="App">
       <Title />
       <Upcoming data={upcoming}/>
       <NbLaunches data={launchData}/>
