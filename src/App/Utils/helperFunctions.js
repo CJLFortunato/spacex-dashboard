@@ -75,3 +75,4 @@ export const colorGenerator = (str) => { // A function that takes in a string an
     };
     return `#${f(0)}${f(8)}${f(4)}`;
 }
+
