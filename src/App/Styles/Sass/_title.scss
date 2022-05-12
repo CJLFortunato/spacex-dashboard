@@ -1,3 +1,27 @@
-h1 {
-    margin: 0;
+.title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg {
+        width: 70%;
+        fill: white;
+        
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-family: 'Orbitron';
+        align-self: flex-end;
+        letter-spacing: 5px;
+        font-size: 1.4rem;
+        position: relative;
+        right: 8%;
+        top: 10px;
+        color: white;
+    }
+
 }
+
