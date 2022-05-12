@@ -318,12 +318,17 @@ GoogleMapReact {
 .upcoming h2, .upcoming p {
   margin: 0;
 }
-.upcoming .upcoming-date {
+.upcoming .countdown {
   color: dodgerblue;
-  font-size: 3rem;
+  font-size: 3.5rem;
+}
+.upcoming .upcoming-date {
+  font-size: 1.7rem;
 }
 .upcoming p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: darkgrey;
 }
 
 * {
