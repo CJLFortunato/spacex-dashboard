@@ -16,8 +16,8 @@ export function SuccessChart(props) {
       datasets: [
           {
               label:'Success rate',
-              backgroundColor: ['rgb(5, 200, 90)', 'rgb(200, 24, 26)'],
-              borderColor: ['rgb(5, 200, 90)', 'rgb(200, 24, 26)'],
+              backgroundColor: ['rgb(5, 200, 90)', 'rgb(200, 80, 82)'],
+              borderColor: ['rgb(5, 200, 90)', 'rgb(200, 80, 82)'],
               data: [successRate.successes, successRate.failures]
       }
       ]
