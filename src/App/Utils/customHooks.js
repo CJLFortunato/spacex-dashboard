@@ -20,12 +20,17 @@ export const useCountdown = (targetDate) => {
   
   const getReturnValues = (countDown) => {
     // calculate time left
-    const days = Math.floor(countDown / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+    const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
     const hours = Math.floor(
       (countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     ).toString().padStart(2, '0');
     const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
     const seconds = Math.floor((countDown % (1000 * 60)) / 1000).toString().padStart(2, '0');
+
+    const daysString = days > 0? days.toString().padStart(2, '0'): "00";
+    const hoursString = hours > 0? hours.toString().padStart(2, '0'): "00";
+    const minutesString = minutes > 0? minutes.toString().padStart(2, '0'): "00";
+    const secondsString = seconds > 0? seconds.toString().padStart(2, '0'): "00";
   
-    return `${days}:${hours}:${minutes}:${seconds}`;
+    return `${daysString}:${hoursString}:${minutesString}:${secondsString}`;
   };

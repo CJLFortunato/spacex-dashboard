@@ -9,7 +9,6 @@ export function Upcoming(props) {
     const date = new Date(data.date_utc);
     const readableDate = date.toLocaleString('fr-FR');
 
-    
     const countdown = useCountdown(date);
     
 
