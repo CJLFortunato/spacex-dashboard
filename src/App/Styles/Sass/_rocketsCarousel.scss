@@ -104,3 +104,46 @@
         }
     }
 }
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) { 
+
+    .rockets-carousel {
+
+        width: 50%;
+
+        button {
+            display: none;
+        }
+        .carousel {
+           overflow: unset;
+
+           width: 100%;
+
+           .inner {
+            white-space: initial;
+            flex-flow: column nowrap;
+            align-items: center;
+            width: 100%;
+        }
+
+        }
+        
+        
+        .rocket {
+            width: 98%;
+            margin-top: 1rem;
+            background-color: hsla(0, 0%, 0%, 0.9);
+            ul {
+            
+                li {
+                    line-height: 1.8rem;
+                    
+                }
+            }
+
+        }
+    }
+
+
+
+}

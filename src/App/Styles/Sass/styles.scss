@@ -155,3 +155,72 @@ p, h2, h3, li {
     }
 
 }
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+
+    body {
+        // background-image: none;
+        // background-color: hsl(200, 50%, 30%);
+         height: unset;
+    }
+    
+    main {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 5rem 12rem 20rem 20rem 81rem 40rem;
+        gap: 1rem
+    }
+
+    .title {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    .map {
+
+        grid-column: 1 / 3;
+        grid-row: 6 / 7;
+    }
+    .timeline {
+
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+    }
+    .upcoming {
+
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+    .charts {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .donut-chart {
+        width: 32%;
+        
+    }
+    .car-data {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+    .nb-launches {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .rockets-carousel {
+        @include component(transparent);
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+    }
+    .pin-details {
+        position: absolute;
+        left: 5%;
+        width: 90%;
+        z-index: 20;
+    }
+
+}

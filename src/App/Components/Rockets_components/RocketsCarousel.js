@@ -24,6 +24,7 @@ export function RocketsCarousel(props) {
     useEffect(( )=> {
 
         if(window.screen.width < 1024) {
+            setActiveIndex(0);
             return;
         } else {
             const interval = setInterval(() => {
@@ -40,9 +41,8 @@ export function RocketsCarousel(props) {
                 }
             };
         }
-    
         
-    });
+    }, [activeIndex, paused]);
 
 
         
