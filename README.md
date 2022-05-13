@@ -12,6 +12,7 @@ Project can be viewed [here](https://spacex-api-dashboard.netlify.app/).
 * [Technologies](#technologies)
 * [Setup and launch](#setup-and-launch)
 * [External ressources](#external-ressources)
+* [Visuals](#visuals)
 
 ## Functionalities
 
@@ -44,7 +45,7 @@ If you wish to change the CSS, don't forget to start Sass processing with `npm r
 
 If you want to run the unit tests, type `npm test`or `npm run test`.
 
-All commands are listed in the "scripts" part of the `package.json`file.
+All commands are listed in the "scripts" part of the `package.json` file.
 
 You will need to provide a Google Maps API key for the map component to work properly. Since the dotenv package is included by default with create-react-app, all you need to do is create a `.env` file at the root of the project and paste the following code into it: 
 
@@ -60,7 +61,19 @@ Don't forget to add your `.env` file to `.gitignore` if it isn't there already.
 
 ## External ressources
 
+[Background image from the SpaceX Unsplash account.](https://unsplash.com/photos/uj3hvdfQujI)
 
-https://unsplash.com/photos/uj3hvdfQujI
+[Integrating Google Maps with React tutorial](https://blog.logrocket.com/integrating-google-maps-react/)
+
+[Countdown timer using React hooks](https://blog.greenroots.info/how-to-create-a-countdown-timer-using-react-hooks)
+
+## Visuals
+
+![website wireframe](src/Ressources/canvas.png)
+Original wireframe
+
+![websitescreenshot](src/Ressources/Screenshot_1.jpg)
+Screeshot of website in Google Chrome v101
+
 
 
