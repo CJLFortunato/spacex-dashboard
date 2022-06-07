@@ -1,14 +1,19 @@
 .title {
   display: flex;
+  flex-flow: column nowrap;
+}
+
+.logo {
+  display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
 }
-.title svg {
+.logo svg {
   width: 70%;
   fill: white;
 }
-.title h1 {
+.logo h1 {
   margin: 0;
   padding: 0;
   font-family: "Orbitron";
@@ -19,6 +24,17 @@
   right: 8%;
   top: 10px;
   color: white;
+}
+
+.disclaimer {
+  font-size: 10pt;
+}
+.disclaimer p {
+  color: lightgrey;
+}
+.disclaimer a {
+  text-decoration: none;
+  color: dodgerblue;
 }
 
 .timeline {

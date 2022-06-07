@@ -16,7 +16,7 @@ Project can be viewed [here](https://spacex-api-dashboard.netlify.app/).
 
 ## Functionalities
 
-This website pulls data from the SpaceX API's lauches, rockets, landpads, launchpads, roadster and history endpoints and displays them to the user.
+This website pulls data from the SpaceX API's launches, rockets, landpads, launchpads, roadster and history endpoints and displays them to the user.
 
 You can click on the map pins to see a panel with details about the location they represent.
 

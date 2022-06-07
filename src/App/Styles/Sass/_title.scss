@@ -1,5 +1,11 @@
 .title {
     display: flex;
+    flex-flow: column nowrap;
+
+}
+
+.logo {
+    display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
@@ -7,7 +13,7 @@
     svg {
         width: 70%;
         fill: white;
-        
+
     }
 
     h1 {
@@ -22,6 +28,17 @@
         top: 10px;
         color: white;
     }
-
 }
 
+.disclaimer {
+    font-size: 10pt;
+
+    p {
+        color: lightgrey;
+    }
+
+    a {
+        text-decoration: none;
+        color: dodgerblue;
+    }
+}
