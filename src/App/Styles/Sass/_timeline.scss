@@ -1,16 +1,17 @@
-@mixin scrollbars(
-  $size: 10px,
+@mixin scrollbars($size: 10px,
   $foreground-color: white,
-  $background-color: black
-) {
+  $background-color: black) {
+
   // For Chrome & Safari
   &::-webkit-scrollbar {
     width: $size;
     height: $size;
   }
+
   &::-webkit-scrollbar-thumb {
     background: $foreground-color;
   }
+
   &::-webkit-scrollbar-track {
     background: $background-color;
   }
@@ -22,23 +23,37 @@
 }
 
 .timeline {
-    overflow: scroll;
-    @include scrollbars();
+  overflow: scroll;
+  @include scrollbars();
 
-    h2 {
-      margin-top: .5rem;
-      border-bottom: 1px solid dodgerblue;
-    }
+  h2 {
+    margin-top: .5rem;
+    border-bottom: 1px solid dodgerblue;
+  }
 }
 
 .event {
-    border-bottom: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  margin-bottom: 1rem;
+
+  h3,
+  p {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+
+  .event {
     padding: 10px;
     margin-bottom: 1rem;
 
-    h3, p {
-        margin: 0;
+    h3,
+    p {
+      font-size: 1rem;
     }
+
+  }
+
 }
-
-

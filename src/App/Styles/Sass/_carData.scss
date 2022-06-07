@@ -1,21 +1,51 @@
 .car-data {
-    text-align: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
 
-    span {
-        color: dodgerblue;
-        font-size: larger;
-      }
 
-      h2 {
-        font-size: 1.8rem;
-      }
-      p {
-          font-size: 1.2rem;
-      }
+  span {
+    color: dodgerblue;
+    font-size: larger;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
 }
 
+@media only screen and (min-width: 1025px) and (max-width: 1599px) {
 
+  .car-data {
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: .8rem;
+    }
+  }
+
+
+
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
+  .car-data {
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+}

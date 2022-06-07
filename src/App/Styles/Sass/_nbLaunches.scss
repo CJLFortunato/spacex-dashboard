@@ -9,23 +9,22 @@
     }
   }
 
-    ul {
 
-        display: flex;
-        flex-flow: column wrap;
-        max-height: 60%;
-        padding-left: 18%;
-        justify-content: center;
+}
 
-      li {
-        list-style-type: none;
-        line-height: 1.3rem;
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+
+  .nb-launches {
+
+    h2 {
+
+      font-size: 1.2rem;
+
+      span {
         color: dodgerblue;
-
-        strong {
-          color: white;
-        }
-        }  
+        font-size: larger;
+      }
     }
-    
+  }
+
 }

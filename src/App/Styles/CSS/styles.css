@@ -62,10 +62,21 @@
   padding: 10px;
   margin-bottom: 1rem;
 }
-.event h3, .event p {
+.event h3,
+.event p {
   margin: 0;
 }
 
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+  .event {
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+  .event h3,
+.event p {
+    font-size: 1rem;
+  }
+}
 .nb-launches h2 {
   text-align: center;
 }
@@ -73,22 +84,16 @@
   color: dodgerblue;
   font-size: larger;
 }
-.nb-launches ul {
-  display: flex;
-  flex-flow: column wrap;
-  max-height: 60%;
-  padding-left: 18%;
-  justify-content: center;
-}
-.nb-launches ul li {
-  list-style-type: none;
-  line-height: 1.3rem;
-  color: dodgerblue;
-}
-.nb-launches ul li strong {
-  color: white;
-}
 
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+  .nb-launches h2 {
+    font-size: 1.2rem;
+  }
+  .nb-launches h2 span {
+    color: dodgerblue;
+    font-size: larger;
+  }
+}
 .rockets-carousel {
   display: flex;
   flex-flow: row nowrap;
@@ -190,6 +195,82 @@
   }
   .rockets-carousel .rocket ul li {
     line-height: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1399px) {
+  .rockets-carousel .rocket {
+    height: 99%;
+    margin-right: 10px;
+    padding: 1%;
+    display: flex;
+    flex-flow: row nowrap;
+    border-radius: 10px;
+    background-color: hsla(0deg, 0%, 0%, 0.7);
+  }
+  .rockets-carousel .rocket ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .rockets-carousel .rocket ul li {
+    line-height: 1.2rem;
+    font-size: smaller;
+  }
+  .rockets-carousel .rocket img {
+    width: 90px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  .rockets-carousel .rocket .text {
+    margin: 0 0.5rem;
+    width: 160px;
+  }
+  .rockets-carousel .rocket h3 {
+    margin: 0.5rem 0;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .rockets-carousel .rocket {
+    height: 99%;
+    margin-right: 10px;
+    padding: 1%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .rockets-carousel .rocket ul {
+    padding-left: 0;
+  }
+  .rockets-carousel .rocket ul li {
+    line-height: 1.2rem;
+    font-size: smaller;
+  }
+  .rockets-carousel .rocket img {
+    width: 90px;
+  }
+  .rockets-carousel .rocket .text {
+    margin: 0 0.5rem;
+    width: 205px;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
+  .rockets-carousel .rocket {
+    height: 280px;
+    margin-right: 10px;
+    padding: 1%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .rockets-carousel .rocket ul {
+    padding-left: 0;
+  }
+  .rockets-carousel .rocket ul li {
+    line-height: 2rem;
+  }
+  .rockets-carousel .rocket img {
+    width: 130px;
+  }
+  .rockets-carousel .rocket .text {
+    margin: 0 0.5rem;
+    width: 210px;
   }
 }
 .map {
@@ -301,6 +382,46 @@ GoogleMapReact {
     font-size: 2.5rem;
   }
 }
+@media only screen and (min-width: 1025px) and (max-width: 1599px) {
+  .chart-title {
+    position: relative;
+    top: -40px;
+    font-size: 2rem;
+  }
+
+  .donut-chart p {
+    font-size: 1rem;
+  }
+
+  .rocket-type p {
+    font-size: 0.9rem;
+  }
+  .rocket-type .chart-title {
+    position: relative;
+    top: -40px;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
+  .chart-title {
+    position: relative;
+    top: -180px;
+    font-size: 1.8rem;
+  }
+
+  .donut-chart p {
+    font-size: 1.5rem;
+  }
+
+  .rocket-type p {
+    font-size: 1.3rem;
+  }
+  .rocket-type .chart-title {
+    position: relative;
+    top: -185px;
+    font-size: 1.4rem;
+  }
+}
 .car-data {
   text-align: center;
   display: flex;
@@ -318,6 +439,22 @@ GoogleMapReact {
   font-size: 1.2rem;
 }
 
+@media only screen and (min-width: 1025px) and (max-width: 1599px) {
+  .car-data h2 {
+    font-size: 1rem;
+  }
+  .car-data p {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
+  .car-data h2 {
+    font-size: 1.5rem;
+  }
+  .car-data p {
+    font-size: 1rem;
+  }
+}
 .pin-details {
   background-color: hsla(0deg, 0%, 0%, 0.8);
   animation: 0.1s ease-in-out 0s 1 running slidein forwards;
@@ -394,7 +531,8 @@ GoogleMapReact {
   flex-direction: column;
   justify-content: center;
 }
-.upcoming h2, .upcoming p {
+.upcoming h2,
+.upcoming p {
   margin: 0;
 }
 .upcoming .countdown {
@@ -410,6 +548,17 @@ GoogleMapReact {
   color: darkgrey;
 }
 
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+  .upcoming .countdown {
+    font-size: 2.5rem;
+  }
+  .upcoming .upcoming-date {
+    font-size: 1rem;
+  }
+  .upcoming p {
+    font-size: 0.8rem;
+  }
+}
 * {
   font-family: "Roboto", "Arial", sans-serif;
 }
@@ -515,7 +664,10 @@ main {
   z-index: 20;
 }
 
-p, h2, h3, li {
+p,
+h2,
+h3,
+li {
   color: white;
 }
 

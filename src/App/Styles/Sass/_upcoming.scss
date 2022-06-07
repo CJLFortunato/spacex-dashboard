@@ -4,8 +4,9 @@
     flex-direction: column;
     justify-content: center;
 
-    h2, p {
-    margin:0;
+    h2,
+    p {
+        margin: 0;
     }
 
     .countdown {
@@ -17,10 +18,28 @@
         font-size: 1.7rem;
     }
 
-    p{
+    p {
         font-size: 1.3rem;
         font-style: italic;
         color: darkgrey;
     }
 }
 
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+
+    .upcoming {
+        .countdown {
+
+            font-size: 2.5rem;
+        }
+
+        .upcoming-date {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: .8rem;
+
+        }
+    }
+}
